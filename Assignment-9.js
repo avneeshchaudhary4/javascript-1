@@ -1,7 +1,20 @@
-const arr = [1,2,999,56,"mithun",1234,"PW"];
-for(let i=0;i<arr.length;i++){
-    if(typeof arr[i] === "string") {
-        console.log("Found the first string: "+arr[i]);
-        break;
+function hasUniqueCharacters(username) {
+    const charSet = new Set();
+    
+    for (const char of username) {
+      if (charSet.has(char)) {
+        return false; // Found a duplicate character
+      }
+      charSet.add(char);
     }
-}
+    
+    return true; // All characters are unique
+  }
+  
+  // Example usage
+  const username1 = "john_doe";
+  const username2 = "jane_smith";
+  
+  console.log(`${username1} has unique characters: ${hasUniqueCharacters(username1)}`);
+  console.log(`${username2} has unique characters: ${hasUniqueCharacters(username2)}`);
+  

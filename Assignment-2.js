@@ -1,12 +1,7 @@
-let username="Avneesh";
-let password=1345;
-if(username=="Avneesh"){
-    if(password==12345){
-    console.log("Login succesfull"); 
+function check(){
+    let sum=0;
+   for(var i=0; i<arguments.length;i++)
+    sum+=arguments[i];
+        console.log("The total cart value is "+sum)
 }
-else{
-    console.log("Invalid Credentials");
-}
-}
-
-
+check(100, 200, 500)
